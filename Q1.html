@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+</head>
+
+<body>
+    <div id="myElement">
+        <p>Welcome to my website!</p>
+    </div>
+</body>
+
+<script>
+    let div = document.getElementById("myElement");
+    // Check if the div has children elements to avoid errors
+    if (div.children.length > 0) {
+        // Based on the HTML structure, the first child is the <p> element
+        // Use innerText not innerHTML to avoid XSS attacks
+        div.children[0].innerText = "Hello there!";
+    }
+</script>
+
+</html>

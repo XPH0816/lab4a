@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+        let text = "";
+
+        // Loop through numbers from 1 to 5
+        for (let i = 0; i < 5; i++) {
+            // Question: Why do we need to add 1 to i?
+            // Answer: Because the loop starts from 0, so we need to add 1 to get the correct number and 
+            //         the question is given the loop number is 0 to 4, so we need to add 1 to get the correct number.
+            text += "The number is " + (i + 1) + "<br>";
+        }
+
+        // Display the text in the paragraph element
+        // innerHTML is given by the question and used to render the HTML tags
+        document.getElementById("demo").innerHTML = text;
+
+        // If you want to use innerText to avoid XSS attacks, you can use the following code
+        // document.getElementById("demo").innerText = text;
+        // and replace the <br> tag with \n in the text variable
+    </script>
+</body>
+
+</html>
